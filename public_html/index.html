@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mohamed Mufas | Digital Media Marketing Professional</title>
+  <meta name="description" content="Portfolio of Mohamed Mufas, a Digital Media Marketing Professional with experience in social media, content marketing, customer engagement, AI-assisted content creation, campaign promotion and digital operations, open to UAE and Gulf opportunities." />
+  <meta name="keywords" content="Mohamed Mufas, Digital Media Marketing Professional, Digital Marketing, Social Media Marketing, Digital Marketing Executive, Content Marketing, Customer Engagement, AI Marketing, UAE Digital Marketing" />
+  <meta name="author" content="Mohamed Mufas" />
+  <meta name="theme-color" content="#071b18" />
+  <link rel="canonical" href="https://mohamedmufas.vercel.app/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Mohamed Mufas | Digital Media Marketing Professional" />
+  <meta property="og:description" content="Digital Marketing • Social Media • Content Strategy • Customer Engagement • AI-Powered Marketing • Digital Operations" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohamedmufas.vercel.app/" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/19xsGQuaV6hU9Jq89rCneJsE52jcTVnVQ" />
+
+  <script>
+    (() => {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      let saved = null;
+      try { saved = localStorage.getItem('mufas-color-theme'); } catch (_) {}
+      const theme = saved === 'light' || saved === 'dark' ? saved : (systemTheme.matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#071b18' : '#f4faf7';
+    })();
+  </script>
+
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/19xsGQuaV6hU9Jq89rCneJsE52jcTVnVQ" />
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/19xsGQuaV6hU9Jq89rCneJsE52jcTVnVQ" />
+
+  <!-- Tailwind: preserved from original source -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+:root{
+    --bg:#071b18;
+    --card: rgba(17,46,40,.78);
+    --border: rgba(148,163,184,.14);
+    --text:#e2e8f0;
+    --muted:#94a3b8;
+    --brand:#6ee7b7;
+    --brand2:#5eead4;
+    --ok:#22c55e;
+    --danger:#ef4444;
+  }
+
+  body{
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background:
+      radial-gradient(1200px 600px at 15% 10%, rgba(16,185,129,.18), transparent 55%),
+      radial-gradient(1000px 500px at 85% 25%, rgba(20,184,166,.14), transparent 55%),
+      var(--bg);
+    color: var(--text);
+    overflow-x:hidden;
+  }
+
+  .nav-link{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .nav-link::after{
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 4px;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--brand), var(--brand2));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after{
+    transform: scaleX(1);
+  }
+
+  .nav-link.active{
+    color: #ffffff;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .glass{
+    background: var(--card);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .profile-container{
+    position:relative;
+    display:inline-block;
+  }
+
+  .loading-ring{
+    position:absolute;
+    inset:-6px;
+    border:2px solid transparent;
+    border-top:2px solid var(--brand);
+    border-right:2px solid var(--brand);
+    border-radius:9999px;
+    animation: spin 2s linear infinite;
+  }
+
+  .loading-ring::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border:2px solid rgba(16,185,129,.12);
+    border-radius:9999px;
+  }
+
+  @keyframes spin{
+    to{ transform:rotate(360deg); }
+  }
+
+  .reveal{
+    opacity:0;
+    transform: translateY(24px);
+    transition: all .9s cubic-bezier(.2,.75,.2,1);
+  }
+
+  .reveal.active{
+    opacity:1;
+    transform: translateY(0);
+  }
+
+  ::-webkit-scrollbar{ width:10px; }
+  ::-webkit-scrollbar-track{ background:#070c18; }
+  ::-webkit-scrollbar-thumb{ background:#22314b; border-radius:6px; }
+  ::-webkit-scrollbar-thumb:hover{ background:#2b3f62; }
+
+  .grad-text{
+    background: linear-gradient(90deg, var(--brand), var(--brand2));
+    -webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+  }
+
+  .whatsapp-float{
+    position:fixed;
+    bottom:26px;
+    right:26px;
+    width:62px;
+    height:62px;
+    border-radius:9999px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#25d366;
+    color:white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+    z-index:80;
+    text-decoration:none;
+    transition: transform .2s ease, filter .2s ease;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .whatsapp-float:hover{
+    filter: brightness(1.05);
+  }
+  
+
+
+
+  .wave-container{
+    position:absolute;
+    inset:0;
+    border-radius:9999px;
+    z-index:-1;
+  }
+
+  .wave{
+    position:absolute;
+    inset:0;
+    border-radius:9999px;
+    background:#25d366;
+    opacity:.55;
+    animation:pulse-wave 2s infinite;
+  }
+
+  .wave:nth-child(2){
+    animation-delay:.55s;
+  }
+
+  @keyframes pulse-wave{
+    from{ transform:scale(1); opacity:.55; }
+    to{ transform:scale(1.9); opacity:0; }
+  }
+
+  .modal-backdrop{
+    position:fixed;
+    inset:0;
+    background: rgba(2,6,23,.72);
+    backdrop-filter: blur(6px);
+    z-index: 90;
+    display:none;
+  }
+
+  .modal-backdrop.open{
+    display:flex;
+  }
+
+  .tag{
+    border:1px solid rgba(148,163,184,.20);
+    background: rgba(2,6,23,.25);
+  }
+
+  /* MOBILE ONLY FIX: stop blue tick + WhatsApp shaking */
+  @media (max-width: 768px){
+    html, body{
+      overflow-x:hidden;
+    }
+
+    .verified-tick{
+      animation:none !important;
+      transition:none !important;
+      transform:translateZ(0) !important;
+      -webkit-transform:translateZ(0) !important;
+      backface-visibility:hidden;
+      -webkit-backface-visibility:hidden;
+    }
+
+     .whatsapp-float{
+      position:fixed; bottom:26px; right:26px;
+      width:62px; height:62px; border-radius:9999px;
+      display:flex; align-items:center; justify-content:center;
+      background:#25d366; color:white;
+      box-shadow: 0 10px 25px rgba(0,0,0,.35);
+      z-index: 80;
+      text-decoration:none;
+      transition: transform .2s ease, filter .2s ease;
+    }
+    .whatsapp-float:hover{ transform: scale(1.06); filter: brightness(1.05); }
+    .wave-container{ position:absolute; inset:0; border-radius:9999px; z-index:-1; }
+    .wave{ position:absolute; inset:0; border-radius:9999px; background:#25d366; opacity:.55; animation:pulse-wave 2s infinite; }
+    .wave:nth-child(2){ animation-delay:.55s; }
+    @keyframes pulse-wave{ from{ transform:scale(1); opacity:.55;} to{ transform:scale(1.9); opacity:0;} }
+
+    .modal-backdrop{ position:fixed; inset:0; background: rgba(2,6,23,.72); backdrop-filter: blur(6px); z-index: 90; display:none; }
+    .modal-backdrop.open{ display:flex; }
+
+  }
+  </style>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+
+<body class="antialiased selection:bg-emerald-500/25">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 border-b theme-border-slate-800-60 theme-bg-slate-950-55 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group" aria-label="M.M. Mufas home">
+        <div class="profile-container transition-transform group-hover:scale-105">
+          <div class="loading-ring"></div>
+          <img
+            src="https://lh3.googleusercontent.com/d/19xsGQuaV6hU9Jq89rCneJsE52jcTVnVQ"
+            alt="M.M. Mufas"
+            class="w-10 h-10 rounded-full object-cover border-2 theme-border-slate-800 relative z-10"
+          />
+        </div>
+        <span class="text-lg font-bold tracking-tight group-hover:theme-text-emerald-300 transition-colors">
+          Mohamed MUFAS
+        </span>
+      </a>
+
+      <div class="hidden xl:flex items-center gap-2 lg:gap-3 xl:gap-4">
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#about">About</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#skills">Skills</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#languages">Languages</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#experience">Experience</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#education">Education</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#certs">Certificates</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#projects">Projects</a>
+        <a class="nav-link px-4 py-2 rounded-xl text-[15px] font-semibold theme-text-slate-300 hover:theme-text-white hover:theme-bg-white-5 transition-all duration-300" href="#contact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <button id="themeToggle" type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.8 13.2A9 9 0 0 1 10.8 3.2 9 9 0 1 0 20.8 13.2Z"/></svg>
+        </button>
+      <button id="mobileBtn" class="xl:hidden theme-text-slate-200 hover:theme-text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="xl:hidden hidden border-t theme-border-slate-800-70 theme-bg-slate-950-80">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium theme-text-slate-200">
+        <a class="hover:theme-text-emerald-300" href="#about">About</a>
+        <a class="hover:theme-text-emerald-300" href="#skills">Skills</a>
+        <a class="hover:theme-text-emerald-300" href="#languages">Languages</a>
+        <a class="hover:theme-text-emerald-300" href="#experience">Experience</a>
+        <a class="hover:theme-text-emerald-300" href="#education">Education</a>
+        <a class="hover:theme-text-emerald-300" href="#certs">Certificates</a>
+        <a class="hover:theme-text-emerald-300" href="#projects">Projects</a>
+        <a class="hover:theme-text-emerald-300" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen pt-32 md:pt-36 px-6 relative">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border theme-border-slate-700-70 theme-bg-slate-900-40 theme-text-emerald-300 text-xs font-semibold tracking-wider uppercase mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          M.M. Mufas • Open to UAE / Gulf Opportunities
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          DIGITAL MEDIA MARKETING <span class="grad-text">PROFESSIONAL</span>
+        </h1>
+
+        <p class="mt-4 theme-text-slate-300 text-lg leading-relaxed max-w-xl">
+          <span class="font-semibold theme-text-white">Digital Marketing</span> | Social Media | Content Strategy | Customer Engagement | AI-Powered Marketing
+        </p>
+
+        <p class="mt-4 theme-text-slate-400 leading-relaxed max-w-xl">
+          Results-focused digital professional with hands-on experience in digital media marketing, social media content, campaign promotion, customer engagement, AI-powered content creation and digital operations.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="tag px-3 py-1 rounded-full text-sm theme-text-slate-200">Digital Marketing</span>
+          <span class="tag px-3 py-1 rounded-full text-sm theme-text-slate-200">Social Media</span>
+          <span class="tag px-3 py-1 rounded-full text-sm theme-text-slate-200">Content Marketing</span>
+          <span class="tag px-3 py-1 rounded-full text-sm theme-text-slate-200">Lead Generation</span>
+          <span class="tag px-3 py-1 rounded-full text-sm theme-text-slate-200">Customer Engagement</span>
+          <span class="tag px-3 py-1 rounded-full text-sm theme-text-slate-200">Digital Operations</span>
+        </div>
+
+        <div class="mt-7 theme-text-slate-300 flex items-center gap-3">
+          <span class="theme-text-slate-500 text-sm uppercase tracking-widest">Focus</span>
+          <span class="w-12 h-px theme-bg-slate-700"></span>
+          <span class="theme-text-emerald-300 font-semibold" id="typed"></span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact" class="px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all shadow-[0_0_22px_rgba(16,185,129,0.25)]">
+            Hire / Contact <i class="fas fa-arrow-right text-sm ml-2"></i>
+          </a>
+          <a href="#projects" class="px-7 py-3 rounded-xl glass hover:theme-bg-slate-900-60 theme-text-white font-semibold transition-all">
+            View Campaigns <i class="fas fa-bullhorn ml-2"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mohamedmufas" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-xl border theme-border-slate-700-80 hover:theme-border-slate-600 theme-text-slate-200 font-semibold transition-all">
+            LinkedIn <i class="fab fa-linkedin ml-2"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-5 text-2xl theme-text-slate-400">
+          <a href="https://www.linkedin.com/in/mohamedmufas" target="_blank" rel="noopener noreferrer" class="hover:theme-text-emerald-300 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/MHDmufas2005/my-new-portfolio-website" target="_blank" rel="noopener noreferrer" class="hover:theme-text-white transition-colors" aria-label="GitHub source"><i class="fab fa-github"></i></a>
+          <a href="mailto:mohamedmufas.connect@gmail.com" class="hover:theme-text-white transition-colors" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+94752005964" class="hover:theme-text-white transition-colors" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          <span class="w-12 h-px theme-bg-slate-700"></span>
+          <span class="text-sm tracking-widest uppercase theme-text-slate-500">Sri Lanka • UAE / Gulf Focus</span>
+        </div>
+      </div>
+
+      <div class="reveal flex justify-center" style="transition-delay:.15s;">
+        <div class="profile-container p-4">
+          <div class="loading-ring" style="inset:0; border-width:3px;"></div>
+          <img
+            src="https://lh3.googleusercontent.com/d/1Br21_z3xL0WOxQTn9vKifgjqtutFiZNr"
+            alt="M.M. Mufas portrait"
+            class="w-64 h-65 md:w-80 md:h-85 rounded-full border-4 theme-border-slate-800 object-cover shadow-2xl hover:scale-[1.03] transition-transform duration-700"
+          />
+
+          <!-- Floating badges: same motion/model, repositioned for marketing identity -->
+          <div class="absolute top-10 -left-6 glass p-3 rounded-xl shadow-xl animate-bounce" style="animation-duration:3s;">
+            <i class="fas fa-bullhorn theme-text-emerald-300 text-2xl"></i>
+          </div>
+          <div class="absolute bottom-10 -right-6 glass p-3 rounded-xl shadow-xl animate-bounce" style="animation-duration:4s; animation-delay:1s;">
+            <i class="fas fa-users theme-text-emerald-300 text-2xl"></i>
+          </div>
+          <div class="absolute -bottom-6 left-20 glass p-3 rounded-xl shadow-xl animate-bounce" style="animation-duration:3.5s; animation-delay:.5s;">
+            <i class="fas fa-wand-magic-sparkles theme-text-yellow-200 text-2xl"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6 border-y theme-border-slate-800-60 theme-bg-slate-950-25">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Profile</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">About Me</h2>
+        <div class="w-20 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="reveal">
+          <h3 class="text-2xl font-semibold">Digital Marketing + Digital Operations</h3>
+          <p class="mt-4 theme-text-slate-300 leading-relaxed">
+            I'm a multidisciplinary digital professional with practical experience across <b>Digital Media Marketing, Social Media Marketing, Customer Engagement, Digital Operations, IT Support and Business Operations</b>.
+          </p>
+          <p class="mt-4 theme-text-slate-400 leading-relaxed">
+            My marketing experience includes creating and managing digital content, supporting social media campaigns and promotional activities, webinar promotion, customer and member engagement, digital communications, and AI-assisted marketing content.
+          </p>
+          <p class="mt-4 theme-text-slate-400 leading-relaxed">
+            I combine creative digital thinking with technical and operational skills, allowing me to understand both the marketing side and the technology behind modern digital businesses. This helps me coordinate content, websites, digital platforms, customer communications and day-to-day digital operations in a practical way.
+          </p>
+          <p class="mt-4 theme-text-slate-400 leading-relaxed">
+            I am particularly interested in <b>Digital Marketing, Social Media, Content Strategy, Lead Generation, Customer Engagement and AI-powered marketing</b>, with the adaptability to support broader marketing and digital operations roles.
+          </p>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-4">
+            <div class="glass rounded-2xl p-5">
+              <div class="theme-text-emerald-300 text-xl font-bold">Marketing</div>
+              <div class="theme-text-slate-400 text-sm mt-1">Campaign & Content Support</div>
+            </div>
+            <div class="glass rounded-2xl p-5">
+              <div class="theme-text-emerald-300 text-xl font-bold">Engagement</div>
+              <div class="theme-text-slate-400 text-sm mt-1">Audience & Customer Focus</div>
+            </div>
+            <div class="glass rounded-2xl p-5">
+              <div class="theme-text-emerald-300 text-xl font-bold">Digital Ops</div>
+              <div class="theme-text-slate-400 text-sm mt-1">Technical Adaptability</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:.12s;">
+          <h3 class="text-2xl font-semibold">Professional Strengths</h3>
+
+          <div class="mt-6 space-y-4">
+            <div class="glass rounded-2xl p-6 flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div>
+                <p class="font-semibold theme-text-white">Campaign & content execution</p>
+                <p class="theme-text-slate-400 text-sm mt-1">Practical support for promotional campaigns, social content, webinar communication and brand visibility.</p>
+              </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div>
+                <p class="font-semibold theme-text-white">Customer-ready communication</p>
+                <p class="theme-text-slate-400 text-sm mt-1">Comfortable supporting audiences, members, customers and cross-functional teams through clear digital communication.</p>
+              </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div>
+                <p class="font-semibold theme-text-white">Creative + technical adaptability</p>
+                <p class="theme-text-slate-400 text-sm mt-1">Combines marketing, digital tools, website coordination, data handling and IT support experience.</p>
+              </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+                <i class="fas fa-wand-magic-sparkles"></i>
+              </div>
+              <div>
+                <p class="font-semibold theme-text-white">AI-assisted content workflow</p>
+                <p class="theme-text-slate-400 text-sm mt-1">Uses AI tools to support content concepts, promotional copy, creative planning and efficient digital workflows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
+        <div>
+          <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Skills</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">Digital Marketing Capabilities</h2>
+        </div>
+        <div class="glass rounded-2xl p-4 flex flex-wrap gap-2 text-sm theme-text-slate-300">
+          <span class="px-3 py-1 rounded-full theme-bg-slate-900-50 border theme-border-slate-700-70">Marketing</span>
+          <span class="px-3 py-1 rounded-full theme-bg-slate-900-50 border theme-border-slate-700-70">Social Media</span>
+          <span class="px-3 py-1 rounded-full theme-bg-slate-900-50 border theme-border-slate-700-70">Content</span>
+          <span class="px-3 py-1 rounded-full theme-bg-slate-900-50 border theme-border-slate-700-70">Digital Operations</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 reveal">
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-semibold">Digital Marketing</h3>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Digital Marketing Strategy</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Social Media Marketing</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Content Marketing</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Digital Campaign Management</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Lead Generation</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Customer Engagement</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Brand Promotion</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Marketing Communications</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-semibold">Social Media</h3>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Facebook Marketing</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Instagram Marketing</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">LinkedIn Marketing</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Social Media Content Planning</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Reels & Short-form Content</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Social Media Advertising</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Audience Engagement</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-semibold">Content & Creative</h3>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">AI-Assisted Content Creation</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Promotional Content</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Marketing Copywriting</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Creative Campaign Concepts</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Visual Content Planning</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Video / Reel Content Concepts</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-semibold">Advertising</h3>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Meta / Facebook Advertising</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Campaign Planning</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Audience Targeting</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Lead Generation Campaigns</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Promotional Campaigns</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7 md:col-span-2">
+          <h3 class="text-xl font-semibold">Digital Operations</h3>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Website Management</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Digital Tools</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Data Handling</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">CRM / Client Management Concepts</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">IT & Digital Support</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Google Workspace</span>
+            <span class="px-4 py-2 theme-bg-slate-900-50 border theme-border-slate-700-70 rounded-xl text-sm theme-text-slate-200">Microsoft Office</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES: same original section model, repurposed from programming -->
+  <section id="languages" class="py-28 px-6 border-y theme-border-slate-800-60 theme-bg-slate-950-30">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Communication</p>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3">
+          Language <span class="grad-text">Proficiency</span>
+        </h2>
+        <div class="w-24 h-1 bg-emerald-500 mx-auto mt-5 rounded-full"></div>
+        <p class="theme-text-slate-400 mt-6 max-w-3xl mx-auto text-sm leading-relaxed">
+          Multilingual communication supporting diverse customers, teams and international work environments.
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6 reveal">
+        <div class="group glass rounded-2xl p-6 text-center hover:scale-105 transition duration-300">
+          <i class="fas fa-language theme-text-emerald-300 text-4xl mb-3"></i>
+          <p class="font-semibold theme-text-white">Tamil</p>
+          <p class="text-xs theme-text-slate-400 mt-1">Native</p>
+        </div>
+        <div class="group glass rounded-2xl p-6 text-center hover:scale-105 transition duration-300">
+          <i class="fas fa-comments theme-text-teal-300 text-4xl mb-3"></i>
+          <p class="font-semibold theme-text-white">English</p>
+          <p class="text-xs theme-text-slate-400 mt-1">Fluent</p>
+        </div>
+        <div class="group glass rounded-2xl p-6 text-center hover:scale-105 transition duration-300">
+          <i class="fas fa-comment-dots theme-text-emerald-300 text-4xl mb-3"></i>
+          <p class="font-semibold theme-text-white">Sinhala</p>
+          <p class="text-xs theme-text-slate-400 mt-1">Fluent</p>
+        </div>
+        <div class="group glass rounded-2xl p-6 text-center hover:scale-105 transition duration-300">
+          <i class="fas fa-globe theme-text-yellow-200 text-4xl mb-3"></i>
+          <p class="font-semibold theme-text-white">Arabic</p>
+          <p class="text-xs theme-text-slate-400 mt-1">Advanced</p>
+        </div>
+        <div class="group glass rounded-2xl p-6 text-center hover:scale-105 transition duration-300">
+          <i class="fas fa-earth-asia theme-text-purple-300 text-4xl mb-3"></i>
+          <p class="font-semibold theme-text-white">Korean</p>
+          <p class="text-xs theme-text-slate-400 mt-1">Intermediate</p>
+        </div>
+        <div class="group glass rounded-2xl p-6 text-center hover:scale-105 transition duration-300">
+          <i class="fas fa-language theme-text-teal-300 text-4xl mb-3"></i>
+          <p class="font-semibold theme-text-white">Russian</p>
+          <p class="text-xs theme-text-slate-400 mt-1">Intermediate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-24 px-6 border-y theme-border-slate-800-60 theme-bg-slate-950-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Experience</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Professional Experience</h2>
+        <div class="w-20 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto space-y-6 reveal">
+        <div class="glass rounded-2xl p-7">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p class="theme-text-emerald-300 font-semibold">December 2023 — Present</p>
+              <h3 class="text-xl font-bold mt-1">Digital Media Marketing Executive & Digital Operations</h3>
+              <p class="theme-text-slate-400 text-sm mt-1">AWI-Canada & CO-Wealth Homes Inc.</p>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs theme-bg-slate-900-60 border theme-border-slate-700-70 theme-text-slate-300">Remote / Hybrid</span>
+          </div>
+          <!--<ul class="mt-5 theme-text-slate-300 text-sm space-y-2 list-disc pl-5">-->
+          <!--  <li>Support digital media marketing activities, social media content planning and campaign promotion.</li>-->
+          <!--  <li>Coordinate webinar promotion, promotional messaging and audience communications.</li>-->
+          <!--  <li>Support customer and member engagement through digital channels.</li>-->
+          <!--  <li>Create and refine AI-assisted marketing content for social posts, promotions and campaign materials.</li>-->
+          <!--  <li>Support website, digital platform and day-to-day digital operations coordination.</li>-->
+          <!--  <li>Work with management and cross-functional teams on digital communication and business initiatives.</li>-->
+          <!--</ul>-->
+        </div>
+        
+                <div class="glass rounded-2xl p-7">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p class="theme-text-emerald-300 font-semibold">November 2023 — Present</p>
+              <h3 class="text-xl font-bold mt-1">Digital Media Marketing Executive</h3>
+              <p class="theme-text-slate-400 text-sm mt-1">Achievers Wealth instutute PVT LTD</p>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs theme-bg-slate-900-60 border theme-border-slate-700-70 theme-text-slate-300">Remote / Hybrid</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p class="theme-text-emerald-300 font-semibold">Entrepreneurial Experience</p>
+              <h3 class="text-xl font-bold mt-1">Founder & Managing Director</h3>
+              <p class="theme-text-slate-400 text-sm mt-1">MOVRO Enterprises (Pvt) Ltd</p>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs theme-bg-slate-900-60 border theme-border-slate-700-70 theme-text-slate-300">Own Digital Business</span>
+          </div>
+          <!--<ul class="mt-5 theme-text-slate-300 text-sm space-y-2 list-disc pl-5">-->
+          <!--  <li>Provide and coordinate digital marketing services, social media marketing and business promotion.</li>-->
+          <!--  <li>Develop digital campaign concepts and AI-powered marketing content.</li>-->
+          <!--  <li>Coordinate website development, e-commerce and digital solution activities.</li>-->
+          <!--  <li>Support customer engagement and digital business consulting.</li>-->
+          <!--  <li>Manage business operations and client-focused digital work.</li>-->
+          <!--</ul>-->
+          <figure class="mt-6 max-w-2xl">
+            <a href="https://movro-enterprises.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View MOVRO Enterprises business card in full size">
+              <img src="assets/portfolio/movro-business-card.png" alt="MOVRO Enterprises (Pvt) Ltd business card showing its digital marketing, web development and business services" loading="lazy" decoding="async" width="1448" height="1086" class="w-full h-auto rounded-xl border theme-border-slate-700-70" />
+            </a>
+            <figcaption class="text-xs theme-text-slate-400 mt-3">MOVRO Enterprises (Pvt) Ltd — Business Card</figcaption>
+          </figure>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p class="theme-text-emerald-300 font-semibold">January 2024 — September 2026</p>
+              <h3 class="text-xl font-bold mt-1"> Director of Administrative Affairs & Social Media Co-Ordinator</h3>
+              <p class="theme-text-slate-400 text-sm mt-1">Lifeline Association</p>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs theme-bg-slate-900-60 border theme-border-slate-700-70 theme-text-slate-300">Colombo</span>
+          </div>
+          <!--<ul class="mt-5 theme-text-slate-300 text-sm space-y-2 list-disc pl-5">-->
+          <!--  <li>Provide IT support, system administration and technical troubleshooting.</li>-->
+          <!--  <li>Support users with hardware, software, email systems and digital platforms.</li>-->
+          <!--  <li>Maintain digital systems, records and routine technical documentation.</li>-->
+          <!--  <li>Support day-to-day technology operations, system maintenance and data protection practices.</li>-->
+          <!--</ul>-->
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p class="theme-text-emerald-300 font-semibold">February 2025 — January 2026</p>
+              <h3 class="text-xl font-bold mt-1">Data Evaluation & Computer Operator</h3>
+              <p class="theme-text-slate-400 text-sm mt-1">Port City Pvt Ltd</p>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs theme-bg-slate-900-60 border theme-border-slate-700-70 theme-text-slate-300">Digital / Administrative Support</span>
+          </div>
+        <!--  <ul class="mt-5 theme-text-slate-300 text-sm space-y-2 list-disc pl-5">-->
+        <!--    <li>Performed data evaluation, computer operations and structured data handling.</li>-->
+        <!--    <li>Maintained accuracy, quality control and documentation standards.</li>-->
+        <!--    <li>Worked with Excel and Google Sheets for digital records and reporting support.</li>-->
+        <!--    <li>Supported administrative and digital processing activities while meeting operational deadlines.</li>-->
+        <!--  </ul>-->
+        <!--</div>-->
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Education</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Academic & Professional Learning</h2>
+        <div class="w-20 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 reveal">
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold">University of Colombo</h3>
+          <p class="theme-text-slate-300 mt-1">Bachelor of Information Technology (BIT) — Reading</p>
+          <p class="theme-text-slate-500 text-sm mt-2">Information Technology • Digital Systems • Technology Management</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold">Cased Institute, Sri Lanka</h3>
+          <p class="theme-text-slate-300 mt-1">Diploma in Media & Marketing Promotion</p>
+          <p class="theme-text-slate-500 text-sm mt-2">2025 — 2026</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold">Cased Institute, Sri Lanka</h3>
+          <p class="theme-text-slate-300 mt-1">Diploma in Information Technology & Artificial Intelligence</p>
+          <p class="theme-text-slate-500 text-sm mt-2">2024 — 2025</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold">Cased Institute, Sri Lanka</h3>
+          <p class="theme-text-slate-300 mt-1">Diploma in Public Relations & Quality Assurance</p>
+          <p class="theme-text-slate-500 text-sm mt-2">2025 — 2026</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold">Cased Institute, Sri Lanka</h3>
+          <p class="theme-text-slate-300 mt-1">Diploma in Spoken English</p>
+          <p class="theme-text-slate-500 text-sm mt-2">2025 — 2026</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold">Relevant Learning Areas</h3>
+          <p class="theme-text-slate-300 mt-2 text-sm leading-relaxed">Digital Marketing • Media & Marketing • Professional Development • AI & Digital Tools</p>
+          <p class="theme-text-slate-500 text-sm mt-2">Marketing-oriented emphasis drawn from genuine study and training listed in this portfolio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs" class="py-24 px-6 border-y theme-border-slate-800-60 theme-bg-slate-950-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Certificates</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Courses & Certifications</h2>
+        <div class="w-20 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 reveal">
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold theme-text-white">Digital Marketing</h3>
+          <div class="mt-5 space-y-4 theme-text-slate-300 text-sm">
+            <div class="flex gap-3 items-start"><i class="fas fa-bullhorn theme-text-emerald-300 mt-0.5"></i><span>Certified LinkedIn Marketing Professional (Udemy)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-envelope-open-text theme-text-emerald-300 mt-0.5"></i><span>Email Marketing Basics (Career Development College of London)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-chart-line theme-text-emerald-300 mt-0.5"></i><span>MBA Course: Marketing & Business Strategy (Udemy)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-users theme-text-emerald-300 mt-0.5"></i><span>Marketing Management (ICAS & Hillston College)</span></div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold theme-text-white">AI & Digital Tools</h3>
+          <div class="mt-5 space-y-4 theme-text-slate-300 text-sm">
+            <div class="flex gap-3 items-start"><i class="fas fa-pen-nib theme-text-emerald-300 mt-0.5"></i><span>Graphic Design (Udemy & Studyz Academy)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-file-excel theme-text-emerald-300 mt-0.5"></i><span>Microsoft Office Expert Level Certification (ACCIS International Campus)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-network-wired theme-text-emerald-300 mt-0.5"></i><span>Internet of Things (SLTC, IEEE, Innov Mind)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-graduation-cap theme-text-emerald-300 mt-0.5"></i><span>e-Library USA Online Training (American Spaces)</span></div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-xl font-bold theme-text-white">Business & Communication</h3>
+          <div class="mt-5 space-y-4 theme-text-slate-300 text-sm">
+            <div class="flex gap-3 items-start"><i class="fas fa-certificate theme-text-emerald-300 mt-0.5"></i><span>Certificate in Leadership Management (Great Knowledge Campus)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-people-group theme-text-emerald-300 mt-0.5"></i><span>Human Resource Management (Binzo)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-microphone-lines theme-text-emerald-300 mt-0.5"></i><span>English Pronunciation Masterclass (Udemy)</span></div>
+            <div class="flex gap-3 items-start"><i class="fas fa-scale-balanced theme-text-emerald-300 mt-0.5"></i><span>Anti-Bribery & Anti-Corruption (Port City Colombo)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center theme-text-slate-500 text-xs mt-6 reveal">
+        Certification names are retained from the original portfolio source; no new platform certification claims have been added.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS / CAMPAIGNS -->
+  <section id="projects" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
+        <div>
+          <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Marketing Portfolio</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">Projects & Campaign Areas</h2>
+          <p class="theme-text-slate-400 mt-3 max-w-2xl text-sm">
+            Social posts, creatives, campaign screenshots, webinar promotions and analytics. The illustrations below are sample visuals, ready to replace with your real portfolio materials.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-2 flex flex-wrap gap-2 text-sm">
+          <button class="filter-btn px-4 py-2 rounded-xl border theme-border-slate-700-70 theme-text-slate-200 hover:theme-border-slate-600 transition theme-bg-slate-900-70" data-filter="all">All</button>
+          <button class="filter-btn px-4 py-2 rounded-xl border theme-border-slate-700-70 theme-text-slate-200 hover:theme-border-slate-600 transition" data-filter="social">Social Media</button>
+          <button class="filter-btn px-4 py-2 rounded-xl border theme-border-slate-700-70 theme-text-slate-200 hover:theme-border-slate-600 transition" data-filter="ads">Advertising</button>
+          <button class="filter-btn px-4 py-2 rounded-xl border theme-border-slate-700-70 theme-text-slate-200 hover:theme-border-slate-600 transition" data-filter="ai">AI Content</button>
+          <button class="filter-btn px-4 py-2 rounded-xl border theme-border-slate-700-70 theme-text-slate-200 hover:theme-border-slate-600 transition" data-filter="webinar">Webinar</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <article class="project-card glass rounded-2xl overflow-hidden group reveal" data-category="social"
+          data-title="01 — Social Media Marketing"
+          data-year="Portfolio Area"
+          data-desc="Social media content planning, promotional posts, audience engagement and brand awareness activities for digital businesses and organizations."
+          data-stack="Facebook • Instagram • LinkedIn • Content Planning • Audience Engagement">
+          <div class="h-56 theme-bg-slate-900-70 relative overflow-hidden">
+            <img src="assets/portfolio/social-media-marketing.png" alt="Concept illustration of social media content planning and audience engagement; AI-generated sample visual" loading="lazy" decoding="async" width="1672" height="941" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <span class="absolute bottom-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white">Sample visual</span>
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold theme-bg-slate-950-60 border theme-border-slate-700-70 theme-text-slate-200">Social Media</div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold group-hover:theme-text-emerald-300 transition-colors">Social Media Marketing</h3>
+              <span class="theme-text-slate-500 text-sm">01</span>
+            </div>
+            <p class="theme-text-slate-400 text-sm mt-3 line-clamp-2">Content planning, promotional posts, audience engagement and brand awareness support.</p>
+            <button class="open-project mt-6 w-full px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all">
+              View Details <i class="fas fa-arrow-right text-sm ml-2"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card glass rounded-2xl overflow-hidden group reveal" style="transition-delay:.08s;" data-category="ads"
+          data-title="02 — Digital Advertising & Lead Generation"
+          data-year="Portfolio Area"
+          data-desc="Campaign concepts focused on reaching targeted audiences, promoting services, generating enquiries and supporting lead-generation activities."
+          data-stack="Campaign Planning • Audience Targeting • Meta / Facebook Advertising • Lead Generation">
+          <div class="h-56 theme-bg-slate-900-70 relative overflow-hidden">
+            <img src="assets/portfolio/digital-advertising-lead-generation.png" alt="Concept illustration of digital advertising, audience targeting and lead generation; AI-generated sample visual" loading="lazy" decoding="async" width="1672" height="941" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <span class="absolute bottom-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white">Sample visual</span>
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold theme-bg-slate-950-60 border theme-border-slate-700-70 theme-text-slate-200">Advertising</div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold group-hover:theme-text-teal-300 transition-colors">Advertising & Lead Generation</h3>
+              <span class="theme-text-slate-500 text-sm">02</span>
+            </div>
+            <p class="theme-text-slate-400 text-sm mt-3 line-clamp-2">Audience-focused campaign concepts supporting enquiries and lead-generation activity.</p>
+            <button class="open-project mt-6 w-full px-4 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-semibold transition-all">
+              View Details <i class="fas fa-arrow-right text-sm ml-2"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card glass rounded-2xl overflow-hidden group reveal" style="transition-delay:.16s;" data-category="ai"
+          data-title="03 — AI-Powered Content Marketing"
+          data-year="Portfolio Area"
+          data-desc="Using AI tools to develop marketing concepts, social media content, promotional creatives, video/reel ideas and campaign materials."
+          data-stack="AI-Assisted Content • Marketing Copy • Creative Concepts • Video / Reel Ideas">
+          <div class="h-56 theme-bg-slate-900-70 relative overflow-hidden">
+            <img src="assets/portfolio/ai-powered-content-marketing.png" alt="Concept illustration of AI-assisted creative content development; AI-generated sample visual" loading="lazy" decoding="async" width="1672" height="941" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <span class="absolute bottom-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white">Sample visual</span>
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold theme-bg-slate-950-60 border theme-border-slate-700-70 theme-text-slate-200">AI Content</div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold group-hover:theme-text-emerald-300 transition-colors">AI-Powered Content Marketing</h3>
+              <span class="theme-text-slate-500 text-sm">03</span>
+            </div>
+            <p class="theme-text-slate-400 text-sm mt-3 line-clamp-2">AI-assisted concepts for social content, promotional creatives and campaign materials.</p>
+            <button class="open-project mt-6 w-full px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all">
+              View Details <i class="fas fa-arrow-right text-sm ml-2"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card glass rounded-2xl overflow-hidden group reveal" style="transition-delay:.08s;" data-category="webinar"
+          data-title="04 — Webinar & Campaign Promotion"
+          data-year="Portfolio Area"
+          data-desc="Digital promotion activities for webinars and campaigns, including social media content, promotional messaging, audience communication and registration-focused campaigns."
+          data-stack="Webinar Promotion • Promotional Messaging • Audience Communication • Registration Support">
+          <div class="h-56 theme-bg-slate-900-70 relative overflow-hidden">
+            <img src="assets/portfolio/webinar-campaign-promotion.png" alt="Concept illustration of webinar invitations and digital campaign promotion; AI-generated sample visual" loading="lazy" decoding="async" width="1672" height="941" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <span class="absolute bottom-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white">Sample visual</span>
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold theme-bg-slate-950-60 border theme-border-slate-700-70 theme-text-slate-200">Webinar</div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-bold group-hover:theme-text-purple-300 transition-colors">Webinar & Campaign Promotion</h3>
+              <span class="theme-text-slate-500 text-sm">04</span>
+            </div>
+            <p class="theme-text-slate-400 text-sm mt-3 line-clamp-2">Promotion, messaging and audience communication for webinars and campaigns.</p>
+            <button class="open-project mt-6 w-full px-4 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold transition-all">
+              View Details <i class="fas fa-arrow-right text-sm ml-2"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 px-6 border-t theme-border-slate-800-60 theme-bg-slate-950-25">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="theme-text-emerald-300 text-sm font-semibold tracking-wider uppercase">Contact</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Let’s Connect</h2>
+        <p class="theme-text-slate-400 mt-4 max-w-2xl mx-auto">
+          M.M. Mufas — Digital Media Marketing Professional. Available to discuss digital marketing, social media, customer engagement, marketing coordination and digital operations opportunities.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-2 space-y-5 reveal">
+          <div class="glass rounded-2xl p-6 flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div>
+              <p class="font-semibold">Professional Focus</p>
+              <p class="theme-text-slate-400 text-sm mt-1">Digital Media Marketing • Open to UAE / Gulf opportunities</p>
+            </div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <p class="font-semibold">Email</p>
+              <a class="theme-text-slate-400 text-sm hover:theme-text-emerald-300 transition break-all" href="mailto:mohamedmufas.connect@gmail.com">mohamedmufas.connect@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <p class="font-semibold">Phone</p>
+              <a class="theme-text-slate-400 text-sm hover:theme-text-emerald-300 transition" href="tel:+94752005964">+94 75 2005 964</a>
+            </div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 theme-text-emerald-300 flex items-center justify-center shrink-0">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div>
+              <p class="font-semibold">LinkedIn</p>
+              <a class="theme-text-slate-400 text-sm hover:theme-text-emerald-300 transition break-all" href="https://www.linkedin.com/in/mohamedmufas" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/mohamedmufas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 reveal" style="transition-delay:.12s;">
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/ajax/mohamedmufas.connect@gmail.com"
+            method="POST"
+            class="glass rounded-2xl p-8"
+          >
+            <input type="hidden" name="_subject" value="New Digital Marketing Portfolio Contact Message" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm theme-text-slate-300 mb-2" for="cname">Your Name</label>
+                <input id="cname" name="name" type="text" required class="w-full rounded-xl theme-bg-slate-900-50 border theme-border-slate-700-70 px-4 py-3 theme-text-white outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/40" placeholder="Your name" />
+              </div>
+              <div>
+                <label class="block text-sm theme-text-slate-300 mb-2" for="cemail">Your Email</label>
+                <input id="cemail" name="email" type="email" required class="w-full rounded-xl theme-bg-slate-900-50 border theme-border-slate-700-70 px-4 py-3 theme-text-white outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/40" placeholder="name@example.com" />
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <label class="block text-sm theme-text-slate-300 mb-2" for="csubject">Subject</label>
+              <input id="csubject" name="subject" type="text" required class="w-full rounded-xl theme-bg-slate-900-50 border theme-border-slate-700-70 px-4 py-3 theme-text-white outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/40" placeholder="Digital Marketing / Social Media / Marketing Role" />
+            </div>
+
+            <div class="mt-6">
+              <label class="block text-sm theme-text-slate-300 mb-2" for="cmessage">Message</label>
+              <textarea id="cmessage" name="message" rows="5" required class="w-full rounded-xl theme-bg-slate-900-50 border theme-border-slate-700-70 px-4 py-3 theme-text-white outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/40 resize-none" placeholder="Write your message..."></textarea>
+            </div>
+
+            <button type="submit" id="sendBtn" class="mt-7 w-full rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-4 transition-all shadow-[0_0_18px_rgba(16,185,129,0.18)] hover:shadow-[0_0_28px_rgba(16,185,129,0.28)]">
+              <span class="inline-flex items-center justify-center gap-2">
+                Send Message <i class="fas fa-paper-plane text-sm"></i>
+              </span>
+            </button>
+
+            <div id="thankYouBox" class="hidden mt-6" aria-live="polite">
+              <div class="rounded-2xl border border-emerald-500/25 bg-emerald-500/10 p-6 text-center">
+                <div class="mx-auto w-12 h-12 rounded-full bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center mb-4">
+                  <span class="text-xl theme-text-emerald-400">✓</span>
+                </div>
+                <h3 class="text-lg font-bold theme-text-white">Thank You!</h3>
+                <p class="mt-2 theme-text-slate-300 text-sm">Your message has been sent successfully.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="theme-bg-slate-950 border-t theme-border-slate-800-70 mt-20">
+    <div class="bg-gradient-to-r from-emerald-900/40 via-teal-900/30 to-emerald-900/40 border-b theme-border-slate-800-60">
+      <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <h3 class="text-2xl font-bold theme-text-white">Digital Marketing That Connects Content, Customers & Operations</h3>
+          <p class="theme-text-slate-400 mt-2 text-sm">Professional digital marketing support with practical content, engagement and digital operations experience.</p>
+        </div>
+
+        <div class="flex gap-4">
+          <a href="https://wa.me/94752005964" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition shadow-lg">
+            WhatsApp <i class="fab fa-whatsapp ml-2"></i>
+          </a>
+          <a href="#contact" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition shadow-lg">
+            Contact Me <i class="fas fa-envelope ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
+      <div>
+        <p class="theme-text-white font-bold text-lg tracking-wide">M.M. Mufas</p>
+        <p class="theme-text-slate-400 text-sm mt-2">Digital Media Marketing Professional</p>
+        <p class="theme-text-slate-400 text-sm mt-6 leading-relaxed">
+          Digital marketing, social media, content, customer engagement and digital operations experience with a supporting technical background.
+        </p>
+
+        <div class="mt-6 flex gap-3 text-lg theme-text-slate-400">
+          <a href="https://www.linkedin.com/in/mohamedmufas" target="_blank" rel="noopener noreferrer" class="hover:theme-text-emerald-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/MHDmufas2005/my-new-portfolio-website" target="_blank" rel="noopener noreferrer" class="hover:theme-text-white" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:mohamedmufas.connect@gmail.com" class="hover:theme-text-white" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/94752005964" target="_blank" rel="noopener noreferrer" class="hover:theme-text-emerald-400" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <p class="theme-text-white font-semibold mb-4">Navigation</p>
+        <ul class="space-y-3 text-sm theme-text-slate-400">
+          <li><a href="#about" class="hover:theme-text-emerald-300">About</a></li>
+          <li><a href="#skills" class="hover:theme-text-emerald-300">Skills</a></li>
+          <li><a href="#languages" class="hover:theme-text-emerald-300">Languages</a></li>
+          <li><a href="#experience" class="hover:theme-text-emerald-300">Experience</a></li>
+          <li><a href="#projects" class="hover:theme-text-emerald-300">Projects</a></li>
+          <li><a href="#contact" class="hover:theme-text-emerald-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="theme-text-white font-semibold mb-4">Core Expertise</p>
+        <ul class="space-y-3 text-sm theme-text-slate-400">
+          <li>• Digital Marketing</li>
+          <li>• Social Media Marketing</li>
+          <li>• Content & Campaign Support</li>
+          <li>• Customer Engagement</li>
+          <li>• AI-Assisted Content</li>
+          <li>• Digital Operations</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="theme-text-white font-semibold mb-4">Contact</p>
+        <div class="space-y-3 text-sm theme-text-slate-400">
+          <p><i class="fas fa-envelope theme-text-emerald-300 mr-2"></i><a href="mailto:mohamedmufas.connect@gmail.com" class="hover:theme-text-emerald-300 break-all">mohamedmufas.connect@gmail.com</a></p>
+          <p><i class="fas fa-phone theme-text-emerald-300 mr-2"></i><a href="tel:+94752005964" class="hover:theme-text-emerald-300">+94 75 2005 964</a></p>
+          <p><i class="fab fa-linkedin-in theme-text-emerald-300 mr-2"></i><a href="https://www.linkedin.com/in/mohamedmufas" target="_blank" rel="noopener noreferrer" class="hover:theme-text-emerald-300">LinkedIn Profile</a></p>
+        </div>
+
+        <div class="mt-6 p-4 rounded-xl theme-bg-slate-900-50 border theme-border-slate-800 text-sm">
+          <p class="theme-text-slate-400">Career Focus</p>
+          <p class="theme-text-emerald-300 font-semibold mt-1">● Open to Digital Marketing & Digital Operations Roles</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t theme-border-slate-800-70">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-2 text-xs theme-text-slate-500">
+        <p>© 2026 M.M. Mufas. All Rights Reserved.</p>
+      <!--  <a href="https://mohamedmufas.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:theme-text-emerald-300">mohamedmufas.vercel.app</a>-->
+      <!--</div>-->
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/94752005964" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contact M.M. Mufas via WhatsApp">
+    <div class="wave-container">
+      <div class="wave"></div><div class="wave"></div>
+    </div>
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- PROJECT MODAL -->
+  <div id="modal" class="modal-backdrop items-center justify-center p-6" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="glass w-full max-w-2xl rounded-2xl p-7 relative">
+      <button id="closeModal" class="absolute top-4 right-4 w-10 h-10 rounded-xl theme-bg-slate-900-60 border theme-border-slate-700-70 hover:theme-border-slate-600 theme-text-slate-200" aria-label="Close modal">
+        <i class="fas fa-xmark"></i>
+      </button>
+
+      <div>
+        <p class="theme-text-emerald-300 text-sm font-semibold" id="mYear"></p>
+        <h3 class="text-2xl font-bold mt-1" id="mTitle"></h3>
+        <p class="theme-text-slate-400 mt-3" id="mDesc"></p>
+      </div>
+
+      <div class="mt-6">
+        <p class="theme-text-slate-300 font-semibold">Marketing Scope / Tools</p>
+        <p class="theme-text-slate-400 mt-1" id="mStack"></p>
+      </div>
+
+      <div class="mt-7 rounded-xl border theme-border-slate-700-70 theme-bg-slate-900-40 p-4">
+        <p class="theme-text-slate-300 text-sm font-semibold"><i class="fas fa-image theme-text-emerald-300 mr-2"></i>Portfolio Evidence</p>
+        <p class="theme-text-slate-500 text-sm mt-2">Reserved for real, verified screenshots, creatives, posts, reels, campaign examples or analytics. No fabricated results are displayed.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme preference: follows the device until the visitor chooses a mode.
+    const themeToggle = document.getElementById('themeToggle');
+    const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+    let explicitTheme = null;
+    try { explicitTheme = localStorage.getItem('mufas-color-theme'); } catch (_) {}
+    function applyTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      const dark = theme === 'dark';
+      themeToggle.setAttribute('aria-pressed', String(dark));
+      themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeToggle.title = themeToggle.getAttribute('aria-label');
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#071b18' : '#f4faf7';
+    }
+    applyTheme(document.documentElement.dataset.theme);
+    themeToggle.addEventListener('click', () => {
+      explicitTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      applyTheme(explicitTheme);
+      try { localStorage.setItem('mufas-color-theme', explicitTheme); } catch (_) {}
+    });
+    function followSystem(event) {
+      if (explicitTheme !== 'dark' && explicitTheme !== 'light') applyTheme(event.matches ? 'dark' : 'light');
+    }
+    if (themeMedia.addEventListener) themeMedia.addEventListener('change', followSystem);
+    else if (themeMedia.addListener) themeMedia.addListener(followSystem);
+
+    // Reveal on scroll
+    function reveal() {
+      const els = document.querySelectorAll(".reveal");
+      const windowH = window.innerHeight;
+      els.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowH - 120) el.classList.add("active");
+      });
+    }
+    window.addEventListener("scroll", reveal, { passive: true });
+    reveal();
+
+    // Mobile menu
+    const mobileBtn = document.getElementById("mobileBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileBtn.setAttribute("aria-expanded", String(!mobileMenu.classList.contains("hidden")));
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileBtn.setAttribute("aria-expanded", "false");
+      }));
+    }
+
+    // Navbar shadow + active link highlight
+    const navbar = document.getElementById("navbar");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    function updateNavigation() {
+      if (navbar) navbar.classList.toggle("shadow-lg", window.scrollY > 30);
+      let current = "";
+      sections.forEach((sec) => {
+        if (window.pageYOffset >= sec.offsetTop - 220) current = sec.id;
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
+      });
+    }
+    window.addEventListener("scroll", updateNavigation, { passive: true });
+    updateNavigation();
+
+    // Typed marketing focus
+    const roles = [
+      "Digital Media Marketing",
+      "Social Media & Content Strategy",
+      "Customer Engagement",
+      "Lead Generation & Campaign Promotion",
+      "AI-Assisted Marketing Content",
+      "Digital Operations"
+    ];
+    const typedEl = document.getElementById("typed");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      if (!typedEl) return;
+      const word = roles[roleIndex];
+      if (!deleting) {
+        typedEl.textContent = word.slice(0, charIndex++);
+        if (charIndex > word.length + 10) deleting = true;
+      } else {
+        typedEl.textContent = word.slice(0, charIndex--);
+        if (charIndex <= 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      window.setTimeout(typeLoop, deleting ? 35 : 55);
+    }
+    typeLoop();
+
+    // Project filtering
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach((button) => button.classList.remove("theme-bg-slate-900-70"));
+        btn.classList.add("theme-bg-slate-900-70");
+        projectCards.forEach((card) => {
+          const show = filter === "all" || card.dataset.category === filter;
+          card.style.display = show ? "" : "none";
+        });
+      });
+    });
+
+    // Project modal
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementById("closeModal");
+    const mTitle = document.getElementById("mTitle");
+    const mYear = document.getElementById("mYear");
+    const mDesc = document.getElementById("mDesc");
+    const mStack = document.getElementById("mStack");
+
+    function openModal(card) {
+      if (!modal || !card) return;
+      mTitle.textContent = card.dataset.title || "Project";
+      mYear.textContent = card.dataset.year || "";
+      mDesc.textContent = card.dataset.desc || "";
+      mStack.textContent = card.dataset.stack || "";
+      modal.classList.add("open", "flex");
+      document.body.style.overflow = "hidden";
+    }
+    function closeModalFn() {
+      if (!modal) return;
+      modal.classList.remove("open", "flex");
+      document.body.style.overflow = "";
+    }
+    if (closeModal) closeModal.addEventListener("click", closeModalFn);
+    if (modal) modal.addEventListener("click", (event) => { if (event.target === modal) closeModalFn(); });
+    document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModalFn(); });
+    document.querySelectorAll(".open-project").forEach((btn) => {
+      btn.addEventListener("click", () => openModal(btn.closest(".project-card")));
+    });
+
+    // Contact form: preserve lightweight FormSubmit workflow while avoiding duplicate listeners/errors.
+    const contactForm = document.getElementById("contactForm");
+    const sendBtn = document.getElementById("sendBtn");
+    const thankYouBox = document.getElementById("thankYouBox");
+
+    if (contactForm && sendBtn && thankYouBox) {
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (!contactForm.reportValidity()) return;
+
+        const originalButton = sendBtn.innerHTML;
+        sendBtn.disabled = true;
+        sendBtn.innerHTML = '<span class="inline-flex items-center justify-center gap-2">Sending... <i class="fas fa-spinner fa-spin text-sm"></i></span>';
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" }
+          });
+
+          if (!response.ok) throw new Error("Message service returned an error.");
+          contactForm.reset();
+          thankYouBox.classList.remove("hidden");
+          window.setTimeout(() => thankYouBox.classList.add("hidden"), 6000);
+        } catch (error) {
+          console.error("Contact form error:", error);
+          window.location.href = "mailto:mohamedmufas.connect@gmail.com?subject=Digital%20Marketing%20Portfolio%20Enquiry";
+        } finally {
+          sendBtn.disabled = false;
+          sendBtn.innerHTML = originalButton;
+        }
+      });
+    }
+  </script>
+</body>
+</html>

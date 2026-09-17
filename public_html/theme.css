@@ -1,0 +1,81 @@
+/* Emerald / teal palette; original layout and motion are defined in index.html. */
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #071b18; --card: rgba(17,46,40,.78); --surface: rgba(20,52,45,.8);
+  --section: rgba(4,22,18,.38); --nav-bg: rgba(7,27,24,.92);
+  --border: rgba(145,191,172,.24); --line: #305c4f;
+  --text: #e7f3ed; --heading: #f5fcf8; --text-secondary: #c8ddd2;
+  --muted: #a4c2b3; --subtle: #99b8a9; --hover: rgba(110,231,183,.09);
+  --brand: #6ee7b7; --brand2: #5eead4; --accent: #6ee7b7; --gold: #fde68a;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4faf7; --card: rgba(255,255,255,.86); --surface: rgba(222,239,231,.75);
+  --section: rgba(230,243,235,.55); --nav-bg: rgba(244,250,247,.94);
+  --border: rgba(32,88,65,.22); --line: #b1cec0;
+  --text: #183d2e; --heading: #102d21; --text-secondary: #2a4d3c;
+  --muted: #466454; --subtle: #526e5f; --hover: rgba(4,120,87,.08);
+  --brand: #047857; --brand2: #0f766e; --accent: #047857; --gold: #8a5b0a;
+}
+body { background: radial-gradient(1200px 600px at 15% 10%, rgba(16,185,129,.12), transparent 55%), radial-gradient(1000px 500px at 85% 25%, rgba(20,184,166,.09), transparent 55%), var(--bg); }
+.glass { background: var(--card); border-color: var(--border); }
+.nav-link.active { color: var(--heading) !important; background: var(--hover); }
+.tag { border-color: var(--border); background: var(--section); }
+.modal-backdrop > .glass { background: var(--bg); max-height: calc(100dvh - 48px); overflow-y: auto; }
+.theme-toggle { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; color: var(--accent); border: 1px solid var(--border); background: var(--card); border-radius: 12px; cursor: pointer; transition: background-color .2s, border-color .2s; }
+.theme-toggle:hover { background: var(--hover); border-color: var(--accent); }
+.theme-toggle:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.theme-sun { display: none; }
+[data-theme="dark"] .theme-sun { display: block; }
+[data-theme="dark"] .theme-moon { display: none; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+input::placeholder, textarea::placeholder { color: var(--subtle); opacity: 1; }
+/* Filled CTAs keep white text and a high-contrast teal background in both modes. */
+[class~="bg-emerald-600"], [class~="bg-teal-600"] { background-color: #047857 !important; }
+[class~="hover:bg-emerald-500"]:hover, [class~="hover:bg-teal-500"]:hover { background-color: #065f46 !important; }
+/* The existing footer gradient and evidence overlays adapt to light mode. */
+[data-theme="light"] [class~="from-emerald-900/40"] { --tw-gradient-from: rgba(16,185,129,.09) var(--tw-gradient-from-position); --tw-gradient-to: rgba(16,185,129,0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+[data-theme="light"] [class~="via-teal-900/30"] { --tw-gradient-stops: var(--tw-gradient-from), rgba(20,184,166,.08) var(--tw-gradient-via-position), var(--tw-gradient-to); }
+[data-theme="light"] [class~="to-emerald-900/40"] { --tw-gradient-to: rgba(16,185,129,.09) var(--tw-gradient-to-position); }
+[data-theme="light"] [class~="from-slate-950"] { --tw-gradient-from: rgba(230,243,235,.3) var(--tw-gradient-from-position); --tw-gradient-to: rgba(230,243,235,0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } html { scroll-behavior: auto !important; } }
+
+/* Palette mappings for the original utility classes. */
+.theme-border-slate-800-60 { border-color: var(--border) !important; }
+.theme-bg-slate-950-55 { background-color: var(--nav-bg) !important; }
+.theme-border-slate-800 { border-color: var(--border) !important; }
+.group:hover .group-hover\:theme-text-emerald-300 { color: var(--accent) !important; }
+.theme-text-slate-300 { color: var(--text-secondary) !important; }
+.hover\:theme-text-white:hover { color: var(--heading) !important; }
+.hover\:theme-bg-white-5:hover { background-color: var(--hover) !important; }
+.theme-text-slate-200 { color: var(--text) !important; }
+.theme-border-slate-800-70 { border-color: var(--border) !important; }
+.theme-bg-slate-950-80 { background-color: var(--nav-bg) !important; }
+.hover\:theme-text-emerald-300:hover { color: var(--accent) !important; }
+.theme-border-slate-700-70 { border-color: var(--border) !important; }
+.theme-bg-slate-900-40 { background-color: var(--surface) !important; }
+.theme-text-emerald-300 { color: var(--accent) !important; }
+.theme-text-white { color: var(--heading) !important; }
+.theme-text-slate-400 { color: var(--muted) !important; }
+.theme-text-slate-500 { color: var(--subtle) !important; }
+.theme-bg-slate-700 { background-color: var(--line) !important; }
+.hover\:theme-bg-slate-900-60:hover { background-color: var(--surface) !important; }
+.theme-border-slate-700-80 { border-color: var(--border) !important; }
+.hover\:theme-border-slate-600:hover { border-color: var(--border) !important; }
+.theme-text-yellow-200 { color: var(--gold) !important; }
+.theme-bg-slate-950-25 { background-color: var(--section) !important; }
+.theme-bg-slate-900-50 { background-color: var(--surface) !important; }
+.theme-bg-slate-950-30 { background-color: var(--section) !important; }
+.theme-text-teal-300 { color: var(--accent) !important; }
+.theme-text-purple-300 { color: var(--accent) !important; }
+.theme-bg-slate-950-20 { background-color: var(--section) !important; }
+.theme-bg-slate-900-60 { background-color: var(--surface) !important; }
+.theme-bg-slate-900-70 { background-color: var(--surface) !important; }
+.theme-bg-slate-950-60 { background-color: var(--section) !important; }
+.group:hover .group-hover\:theme-text-teal-300 { color: var(--accent) !important; }
+.group:hover .group-hover\:theme-text-purple-300 { color: var(--accent) !important; }
+.theme-text-emerald-400 { color: var(--accent) !important; }
+.theme-bg-slate-950 { background-color: var(--section) !important; }
+.hover\:theme-text-emerald-400:hover { color: var(--accent) !important; }
